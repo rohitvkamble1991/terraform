@@ -1,10 +1,12 @@
 provider "aws" {
-region = "us-east-1"
+region = "us-east-2"
 }
 
 
 resource "aws_instance" "one" {
 count = 5
-ami = "ami-03eb6185d756497f8"
+ami = "ami-088d38b423bff245f"
 instance_type = "t2.micro"
+tags={
+Name="RohitHCPserver"
 }
